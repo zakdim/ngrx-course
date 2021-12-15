@@ -83,6 +83,8 @@ It's also possible to download a ZIP file for a given branch,  using the branch 
 
 ## Section-01 - Introduction
 
+Course [GitHub](https://github.com/angular-university/ngrx-course)
+
 ### Lecture-03 - NgRx The Complete Guide - Development Environment Setup
 
 ``` 
@@ -95,4 +97,12 @@ npm run server    # running on http://localhost:9000
 # 3. Start application
 npm start
 
+# Access http://localhost:4200
+```
+
+### Lecture-06 - Installing NgRx and the NgRx DevTools
+
+``` 
+ng add @ngrx/store
+ng add @ngrx/store-devtools
 ```
