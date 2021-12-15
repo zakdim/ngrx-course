@@ -106,3 +106,31 @@ npm start
 ng add @ngrx/store
 ng add @ngrx/store-devtools
 ```
+
+## Section-02 - NgRx Key Concepts - Actions and Reducers
+
+### Lecture-07 - Configuring an NgRx Feature Module using NgRx Schematics
+
+* Update dependencies
+
+``` 
+"dependencies": {
+    ...
+    "@ngrx/data": "^8.0.1",
+    "@ngrx/effects": "^8.0.1",
+    "@ngrx/entity": "^8.0.1",
+    "@ngrx/router-store": "^8.0.1",
+    ...
+}
+"devDependencies": {
+    ...
+    "@ngrx/schematics": "^8.0.1",
+    ...
+}
+```
+
+* Generate Auth store
+
+``` 
+ng generate store auth/Auth --module auth.module.ts
+```
