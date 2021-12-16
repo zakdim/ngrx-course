@@ -24,6 +24,12 @@ export const authReducer = createReducer(
     initialAuthState,
 
     on(AuthActions.login, (state, action) => {
+
+        // console.log('Calling login reducer');
+        //
+        // // tslint:disable-next-line:no-debugger
+        // debugger;
+
         return {
             user: action.user
         };

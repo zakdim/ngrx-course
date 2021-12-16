@@ -8,7 +8,7 @@ import {tap} from 'rxjs/operators';
 import {noop} from 'rxjs';
 import {Router} from '@angular/router';
 import {AppState} from '../../reducers';
-import {login} from '../auth.actions';
+import {AuthActions} from '../action-types';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -46,7 +46,15 @@ export class LoginComponent implements OnInit {
 
                   console.log(`Login: ${JSON.stringify(user)}`);
 
-                  this.store.dispatch(login({user}));
+                  // const newLoginAction = login({user});
+                  //
+                  // console.log('New login action: ', newLoginAction);
+                  //
+                  // // tslint:disable-next-line:no-debugger
+                  // debugger;
+                  //
+                  // this.store.dispatch(newLoginAction);
+                  this.store.dispatch(AuthActions.login({user}));
 
                   this.router.navigateByUrl('/courses');
               })
