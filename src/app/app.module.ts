@@ -53,11 +53,11 @@ const routes: Routes = [
     AuthModule.forRoot(),
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([]),
-    StoreRouterConnectingModule.forRoot({
-        stateKey: 'router',
-        routerState: RouterState.Minimal
-    })
+    // EffectsModule.forRoot([]),
+    // StoreRouterConnectingModule.forRoot({
+    //     stateKey: 'router',
+    //     routerState: RouterState.Minimal
+    // })
   ],
   bootstrap: [AppComponent]
 })
