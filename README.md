@@ -91,7 +91,7 @@ Course [GitHub](https://github.com/angular-university/ngrx-course)
 # 1. Install dependencies
 npm istall
 
-# 2. Start server
+# 2. Start serverF
 npm run server    # running on http://localhost:9000
 
 # 3. Start application
