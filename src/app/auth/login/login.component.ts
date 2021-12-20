@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
           .pipe(
               tap(user => {
 
-                  console.log(`Login: ${JSON.stringify(user)}`);
+                  console.log(`Login button clicked: ${JSON.stringify(user)}`);
 
                   // const newLoginAction = login({user});
                   //
