@@ -40,11 +40,12 @@ export class LoginComponent implements OnInit {
   login() {
 
       const val = this.form.value;
+      console.log(`Login button clicked: ${JSON.stringify(val)}`);
       this.auth.login(val.email, val.password)
           .pipe(
               tap(user => {
 
-                  console.log(`Login button clicked: ${JSON.stringify(user)}`);
+                  console.log(`Authenticated user: ${JSON.stringify(user)}`);
 
                   // const newLoginAction = login({user});
                   //
@@ -54,6 +55,7 @@ export class LoginComponent implements OnInit {
                   // debugger;
                   //
                   // this.store.dispatch(newLoginAction);
+                  console.log(`Dispatching login action: ${JSON.stringify(user)}`);
                   this.store.dispatch(AuthActions.login({user}));
 
                   this.router.navigateByUrl('/courses');
