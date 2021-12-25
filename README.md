@@ -129,6 +129,12 @@ ng add @ngrx/store-devtools
 }
 ```
 
+* Add prittier
+
+``` 
+npm install prettier --save-dev 
+```
+
 * Generate Auth store
 
 ``` 
