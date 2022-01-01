@@ -1,14 +1,17 @@
 import { Component, OnInit } from "@angular/core";
-import { compareCourses, Course } from "../model/course";
+import { select, Store } from "@ngrx/store";
 import { Observable } from "rxjs";
-import { defaultDialogConfig } from "../shared/default-dialog-config";
-import { EditCourseDialogComponent } from "../edit-course-dialog/edit-course-dialog.component";
 import { MatDialog } from "@angular/material/dialog";
-import { map, shareReplay } from "rxjs/operators";
-import { CoursesHttpService } from "../services/courses-http.service";
-import {select, Store} from '@ngrx/store';
-import {AppState} from '../../reducers';
-import {selectAdvancedCourses, selectBeginnerCourses, selectPromoTotal} from '../courses.selectors';
+
+import { defaultDialogConfig } from "../shared/default-dialog-config";
+import { compareCourses, Course } from "../model/course";
+import { AppState } from "../../reducers";
+import {
+    selectAdvancedCourses,
+    selectBeginnerCourses,
+    selectPromoTotal,
+} from "../courses.selectors";
+import { EditCourseDialogComponent } from "../edit-course-dialog/edit-course-dialog.component";
 
 @Component({
     // tslint:disable-next-line:component-selector
@@ -18,8 +21,6 @@ import {selectAdvancedCourses, selectBeginnerCourses, selectPromoTotal} from '..
 })
 export class HomeComponent implements OnInit {
     promoTotal$: Observable<number>;
-
-    loading$: Observable<boolean>;
 
     beginnerCourses$: Observable<Course[]>;
 
