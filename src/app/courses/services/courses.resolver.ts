@@ -5,7 +5,7 @@ import {
     RouterStateSnapshot,
 } from "@angular/router";
 import { Observable } from "rxjs";
-import {filter, first, map, tap} from 'rxjs/operators';
+import { filter, first, map, tap } from "rxjs/operators";
 
 import { CourseEntityService } from "./course-entity.service";
 
@@ -17,14 +17,13 @@ export class CoursesResolver implements Resolve<boolean> {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): Observable<boolean> | Promise<boolean> | boolean {
-
         return this.coursesService.loaded$.pipe(
             tap((loaded) => {
                 if (!loaded) {
                     this.coursesService.getAll();
                 }
             }),
-            filter(loaded => !!loaded),
+            filter((loaded) => !!loaded),
             first()
         );
     }
