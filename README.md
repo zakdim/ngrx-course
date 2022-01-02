@@ -140,3 +140,8 @@ npm install prettier --save-dev
 ``` 
 ng generate store auth/Auth --module auth.module.ts
 ```
+
+## Section-06 - NgRx Data In Depth
+
+### Lecture-38 - Setting Up NgRx Data in a Lazy Loaded Module
+
