@@ -143,5 +143,10 @@ ng generate store auth/Auth --module auth.module.ts
 
 ## Section-06 - NgRx Data In Depth
 
-### Lecture-38 - Setting Up NgRx Data in a Lazy Loaded Module
+### Lecture-40 - NgRx Custom Data Service - Fetching Data From the Backend
+
+``` 
+# Backend API
+http://localhost:9000/api/courses
+```
 
