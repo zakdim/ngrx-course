@@ -150,3 +150,8 @@ ng generate store auth/Auth --module auth.module.ts
 http://localhost:9000/api/courses
 ```
 
+### Lecture-44 - NgRx Data CRUD - Why Pessimistic Data Creation?
+
+```
+https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-testing-small.png
+```

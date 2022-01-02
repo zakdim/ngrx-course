@@ -4,7 +4,6 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Observable } from "rxjs";
 
 import { Course } from "../model/course";
-import { CoursesHttpService } from "../services/courses-http.service";
 import { CourseEntityService } from "../services/course-entity.service";
 
 @Component({
@@ -66,6 +65,15 @@ export class EditCourseDialogComponent {
         if (this.mode === "update") {
             this.coursesService.update(course);
             this.dialogRef.close();
+
+        } else if (this.mode === "create") {
+            this.coursesService.add(course) // pessimistic by default
+                .subscribe(
+                    newCourse => {
+                        console.log("New Course: ", newCourse);
+                        this.dialogRef.close();
+                    }
+                );
         }
     }
 }
