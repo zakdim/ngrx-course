@@ -28,8 +28,10 @@ export const coursesReducer = createReducer(
         })
     ),
 
-    on(CourseActions.courseUpdated, (state, action) =>
-        adapter.updateOne(action.update, state) )
+    on(CourseActions.courseUpdated, (state, action) => {
+        console.log("coursesReducer: action=courseUpdate ", state);
+        return adapter.updateOne(action.update, state);
+    })
 );
 
 export const { selectAll } = adapter.getSelectors();

@@ -70,6 +70,7 @@ export class EditCourseDialogComponent {
             changes: course
         };
 
+        console.log("onSave: ", update);
         this.store.dispatch(courseUpdated({update}));
 
         this.dialogRef.close();
