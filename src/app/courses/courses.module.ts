@@ -25,12 +25,12 @@ import {
     EntityDataService,
     EntityDefinitionService,
     EntityMetadataMap,
-} from '@ngrx/data';
+} from "@ngrx/data";
 
 import { CourseEntityService } from "./services/course-entity.service";
 import { CoursesResolver } from "./services/courses.resolver";
 import { CoursesDataService } from "./services/courses-data.service";
-import {compareCourses} from './model/course';
+import {compareCourses} from "./model/course";
 
 export const coursesRoutes: Routes = [
     {
@@ -51,7 +51,10 @@ export const coursesRoutes: Routes = [
 
 const entityMetadata: EntityMetadataMap = {
     Course: {
-        sortComparer: compareCourses
+        sortComparer: compareCourses,
+        entityDispatcherOptions: {
+            optimisticUpdate: true
+        }
     },
 };
 
