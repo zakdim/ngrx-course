@@ -1,23 +1,17 @@
-import {
-    Component,
-    EventEmitter,
-    Input,
-    OnInit,
-    Output,
-    ViewEncapsulation,
-} from "@angular/core";
-import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, } from "@angular/core";
+import {MatDialog} from "@angular/material/dialog";
 
-import { Course } from "../model/course";
-import { EditCourseDialogComponent } from "../edit-course-dialog/edit-course-dialog.component";
-import { defaultDialogConfig } from "../shared/default-dialog-config";
-import { CourseEntityService } from "../services/course-entity.service";
+import {Course} from "../model/course";
+import {EditCourseDialogComponent} from "../edit-course-dialog/edit-course-dialog.component";
+import {defaultDialogConfig} from "../shared/default-dialog-config";
+import {CourseEntityService} from "../services/course-entity.service";
 
 @Component({
     // tslint:disable-next-line:component-selector
     selector: "courses-card-list",
     templateUrl: "./courses-card-list.component.html",
     styleUrls: ["./courses-card-list.component.css"],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoursesCardListComponent implements OnInit {
     @Input()
